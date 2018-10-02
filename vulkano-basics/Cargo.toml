@@ -1,0 +1,8 @@
+[package]
+name = "basicvk"
+version = "0.1.0"
+authors = ["Federico Frenguelli <synasius@gmail.com>"]
+
+[dependencies]
+vulkano = "0.10"
+vulkano-shader-derive = "0.10.0"
