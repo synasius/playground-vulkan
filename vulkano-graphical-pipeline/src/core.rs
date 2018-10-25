@@ -1,7 +1,17 @@
 extern crate vulkano;
 
+use vulkano::device::Device;
+use vulkano::device::DeviceExtensions;
+use vulkano::device::QueuesIter;
 
-fn init() -> (Arc<Device>, QueuesIter) {
+use vulkano::instance::Features;
+use vulkano::instance::Instance;
+use vulkano::instance::InstanceExtensions;
+use vulkano::instance::PhysicalDevice;
+
+use std::sync::Arc;
+
+pub fn init() -> (Arc<Device>, QueuesIter) {
     // Create an instance of the vulkan API
     let instance =
         Instance::new(None, &InstanceExtensions::none(), None).expect("failed to create instance");
